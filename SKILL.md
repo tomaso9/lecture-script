@@ -43,6 +43,10 @@ supplies the words.
   length, what they do when a student pushes back. Every red line is written
   against that sketch and must sit next to black lines without a visible
   seam.
+- Drop verbal tics ("right?", "okay so") but keep one or two of the
+  instructor's classroom check-ins per module, in their own words and where
+  they actually said them, such as "Does that make sense?" They make the
+  video feel like a class rather than a broadcast.
 - If `references/style-sample.docx` exists, read it as a model of what a
   finished script looks like: structure, hook, cue style, pacing, how much
   gets rewritten. It is not a voice model. Do not borrow its phrasing.

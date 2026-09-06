@@ -3,8 +3,9 @@
 
     python lecture_tools.py pptx  DECK.pptx            dump slide text, notes, diagrams
     python lecture_tools.py docx  FILE.docx            dump a Word file as plain text
-    python lecture_tools.py build SCRIPT.txt [-o OUT.docx] [--wpm 130] [--max-total 20]
+    python lecture_tools.py build SCRIPT.txt [-o OUT.docx] [--wpm 130] [--max-total 20] [--rm]
                                                        build the color-coded Word script
+                                                       (--rm deletes SCRIPT.txt after a successful build)
 
 Script text format (one sentence per line):
     Title: My lecture            optional, first line only
@@ -141,7 +142,7 @@ def words(s):
     return len(re.findall(r"[\w'’-]+", s))
 
 
-def build(script_path, out_path, wpm, max_total, seg_min, seg_max):
+def build(script_path, out_path, wpm, max_total, seg_min, seg_max, remove_source=False):
     import docx
     from docx.enum.text import WD_ALIGN_PARAGRAPH  # noqa: F401
     from docx.shared import Pt, RGBColor
@@ -213,6 +214,9 @@ def build(script_path, out_path, wpm, max_total, seg_min, seg_max):
           f"{'  <-- over ' + str(max_total) + ' min' if total_min > max_total else ''}")
     if total:
         print(f"  New writing: {total_new / total * 100:.0f}% of spoken words")
+    if remove_source:
+        Path(script_path).unlink()
+        print(f"Removed source {script_path}")
 
 
 def main():
@@ -229,6 +233,7 @@ def main():
     c.add_argument("--max-total", type=float, default=20, help="flag if total exceeds this many minutes")
     c.add_argument("--seg-min", type=float, default=5)
     c.add_argument("--seg-max", type=float, default=15)
+    c.add_argument("--rm", action="store_true", help="delete the script text file after a successful build")
     args = ap.parse_args()
 
     if args.cmd == "pptx":
@@ -237,7 +242,7 @@ def main():
         dump_docx(args.path)
     else:
         out = args.out or str(Path(args.script).with_suffix(".docx"))
-        build(args.script, out, args.wpm, args.max_total, args.seg_min, args.seg_max)
+        build(args.script, out, args.wpm, args.max_total, args.seg_min, args.seg_max, args.rm)
 
 
 if __name__ == "__main__":

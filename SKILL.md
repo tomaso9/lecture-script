@@ -81,7 +81,8 @@ supplies the words.
    Wait for approval. Do not draft until the user says go.
 
 3. **Draft as a plain-text script** in the format below, one sentence per
-   line, saved next to the inputs as `<lecture>-script.txt`. Write against the
+   line, saved next to the inputs as `<lecture>-script.txt` (the builder
+   removes it at the end). Write against the
    writing guide's checklist: a hook that puts the student in a situation,
    one central question per segment stated early, concrete anchors, varied
    sentence length with at least one very short sentence, direct address, a
@@ -99,9 +100,9 @@ supplies the words.
 5. **Build and report.** Run
    `python scripts/lecture_tools.py build <lecture>-script.txt` and relay its
    per-segment word and minute table verbatim, including any flags. Fix
-   flagged lengths and rebuild before delivering. Tell the user where the
-   `.docx` and the `.txt` are; they can edit the text file and rebuild
-   without you.
+   flagged lengths and rebuild. When the numbers are right, run it once more
+   with `--rm` so only the `.docx` is left next to the inputs, and tell the
+   user where it is. They edit the Word file directly from there.
 
 ## Script text format
 

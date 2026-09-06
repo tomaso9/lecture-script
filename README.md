@@ -33,12 +33,10 @@ In Claude Code, from the folder holding your transcript and deck:
 ```
 
 Claude reads both, shows an outline, waits for your approval, then drafts,
-checks, and builds `<lecture>-script.txt` and `<lecture>-script.docx` next
-to your inputs. Edit the text file and rebuild any time:
-
-```
-python ~/.claude/skills/lecture-script/scripts/lecture_tools.py build my-lecture-script.txt
-```
+checks, and builds `<lecture>-script.docx` next to your inputs. From there
+you edit the Word file directly. (The plain-text draft Claude works from is
+removed after the build; if you would rather keep it to rebuild yourself,
+drop the `--rm` flag in step 5 of `SKILL.md`.)
 
 ## Voice
 

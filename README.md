@@ -43,8 +43,9 @@ python ~/.claude/skills/lecture-script/scripts/lecture_tools.py build my-lecture
 ## Voice
 
 The skill writes new lines to match the instructor's voice, inferred from the
-transcript and from `references/style-sample.docx` if present. Replace that
-file with a script of your own that you like.
+transcript alone. `references/style-sample.docx` is a model of a finished
+script (structure, hook, cues, pacing, how much gets rewritten), not of
+anyone's voice. Replace it with a script you consider well built.
 
 `references/voice-oliver.md` adds a light "Last Week Tonight" register to new
 lines: deadpan about absurd facts, escalation, a provocative close, one or two
@@ -58,7 +59,7 @@ permanently, or say "plain voice" when invoking the skill to skip it once.
 | `SKILL.md` | The workflow and rules Claude follows |
 | `references/Video Lecture Script - writing guide v1.docx` | CODL writing guide, read at the start of every run |
 | `references/Video Lecture Script - evergreen v1.docx` | CODL evergreen checklist, same |
-| `references/style-sample.docx` | An approved script used as a register model (optional) |
+| `references/style-sample.docx` | A well-built script used as a structural model, not a voice model (optional) |
 | `references/voice-oliver.md` | Optional voice module (delete to disable) |
 | `scripts/lecture_tools.py` | Dumps pptx and docx to text; builds the Word script |
 

@@ -37,13 +37,15 @@ supplies the words.
 - Select the instructor's sentences before writing new ones. New writing is
   for hooks, transitions, and gaps the slides show the transcript missed. A
   segment over about a third red is a signal to go back to the transcript.
-- Before drafting, write a short voice sketch from the transcript: how they
-  open a point, how they ask questions, recurring phrases, favorite examples,
-  typical sentence length, what they do when a student pushes back. Every red
-  line is written against that sketch and must sit next to black lines
-  without a visible seam.
-- If `references/style-sample.docx` exists, read it. It is a script the
-  instructor approved; match its register and rewriting level.
+- The transcript is the only source of the instructor's voice. Before
+  drafting, write a short voice sketch from it: how they open a point, how
+  they ask questions, recurring phrases, favorite examples, typical sentence
+  length, what they do when a student pushes back. Every red line is written
+  against that sketch and must sit next to black lines without a visible
+  seam.
+- If `references/style-sample.docx` exists, read it as a model of what a
+  finished script looks like: structure, hook, cue style, pacing, how much
+  gets rewritten. It is not a voice model. Do not borrow its phrasing.
 - Banned tells in red lines: "let's dive in", "delve", "it's important to
   note", "think of it as", "in this segment we will", "today we're going
   to", tidy three-item lists for their own sake, a summary at the end, a
@@ -68,7 +70,7 @@ supplies the words.
    - content that will not be recorded: activities, logistics, due dates,
      reading assignments, student discussion, anything tied to a week or
      module number;
-   - the voice sketch, in five to eight lines;
+   - the voice sketch drawn from the transcript, in five to eight lines;
    - the segments: title, central question, slides covered, target minutes,
      and the transcript passages that anchor each (a few words each);
    - the total against the length default.

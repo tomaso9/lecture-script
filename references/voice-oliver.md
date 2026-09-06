@@ -38,9 +38,11 @@ incredulity about the situation, escalation, a provocative close.
   the close. Avoid beats in the middle of a definition or a step-by-step
   explanation.
 
-## Calibration from the instructor's own approved script
+## Calibration from the style sample
 
-These lines from the style sample show the level. Match this, not more.
+These lines from `style-sample.docx` show the dose and placement. Match the
+level, not the phrasing: the words in any new line must come from the
+instructor's own voice as sketched from the transcript.
 
 - Stating the absurd plainly, then a one-word turn: "For an agreement whose
   purpose is, among other things, cutting emissions, that reads like an
